@@ -1,7 +1,7 @@
 import pandas as pd
 
 for i in range(1,11):
-    path = '/content/drive/MyDrive/Preprocessing/Batches/Batch' +str(i) +'pre.csv'
+    path = '/content/colabdata/Batches/Batch' +str(i) +'pre.csv'
     with open(path, newline='') as csvfile:
         df = pd.read_csv(csvfile, dtype='float', na_values=['??', 'None', 'NaN'])
     
@@ -16,5 +16,5 @@ for i in range(1,11):
     #print(X.keys())
     X = X.iloc[7:,:]
     
-    pathX = '/content/drive/MyDrive/Preprocessing/Batches/Batch_' +str(i) +'_raman.pkl'
+    pathX = '/content/colabdata/Batches/Batch_' +str(i) +'_raman.pkl'
     X.to_pickle(pathX)
