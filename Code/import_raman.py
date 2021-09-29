@@ -6,5 +6,5 @@ for i in range(1,11):
         df = pd.read_csv(csvfile, dtype='float', na_values=['??', 'None', 'NaN'])
 
     df = df.iloc[11:][:]
-    path = '/content/colabdata/Preprocessing/Raman/coeff' +str(i) +'.pkl'
+    path = '/content/colabdata/Raman/coeff' +str(i) +'.pkl'
     df.to_pickle(path)
