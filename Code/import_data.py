@@ -1,7 +1,7 @@
 import pandas as pd
 
 for i in range(1,11):
-    path = '/content/drive/MyDrive/Preprocessing/Batches/Batch' +str(i) +'pre.csv'
+    path = '/content/colabdata/Batches/Batch' +str(i) +'pre.csv'
     with open(path, newline='') as csvfile:
         df = pd.read_csv(csvfile, dtype='float', na_values=['??', 'None', 'NaN'])
     
@@ -20,7 +20,7 @@ for i in range(1,11):
     X['Oxygen in percent in off-gas(O2:O2  (%))'] = df.iloc[4:]['Oxygen in percent in off-gas(O2:O2  (%))']
     #print(X.keys())
     
-    pathU = '/content/drive/MyDrive/Preprocessing/Batches/Batch_' +str(i) +'_input.pkl'
-    pathX = '/content/drive/MyDrive/Preprocessing/Batches/Batch_' +str(i) +'_state.pkl'
+    pathU = '/content/colabdata/Batches/Batch_' +str(i) +'_input.pkl'
+    pathX = '/content/colabdata/Batches/Batch_' +str(i) +'_state.pkl'
     U.to_pickle(pathU)
     X.to_pickle(pathX)
